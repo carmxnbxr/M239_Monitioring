@@ -60,7 +60,7 @@ python3.8 /monitor/start.py
 ```
 
 <h3>Webseite über Browser aufrufen</h3>
-IP-Adresse (mit "ip a" abfragen) oder localhost (Auf dem Gerät)
+IP-Adresse (mit "ip a" abfragen) oder localhost (Auf dem Gerät) <br>
 
 ![image](https://user-images.githubusercontent.com/60874453/173822312-de9f97a5-d8d6-4a30-ba49-942cb8cf98ea.png)
 ![image](https://user-images.githubusercontent.com/60874453/173823638-d769477d-6912-4c59-bc0f-dc75e1047982.png)
