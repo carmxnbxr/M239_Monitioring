@@ -44,15 +44,18 @@ pip3 install psutil
 <code>wget <Link> </code>
 ```
 
-<code>python3.8 /monitor/start.py </code>
+```
+python3.8 /monitor/start.py
+```
 
- Webseite über Browser aufrufen 
+##Webseite über Browser aufrufen 
 Connect to IP (Befehl: ip a) / localhost
 
 Zu Autostart hinzufügen
 
-
-<code>nano /etc/systemd/system/monitor.service
+```
+nano /etc/systemd/system/monitor.service
+```
 
 ```
 [Unit]
