@@ -61,8 +61,13 @@ python3.8 /monitor/start.py
 
 <h3>Webseite über Browser aufrufen</h3>
 IP-Adresse (mit "ip a" abfragen) oder localhost (Auf dem Gerät)
+![image](https://user-images.githubusercontent.com/60874453/173822312-de9f97a5-d8d6-4a30-ba49-942cb8cf98ea.png)
+![image](https://user-images.githubusercontent.com/60874453/173823638-d769477d-6912-4c59-bc0f-dc75e1047982.png)
+![image](https://user-images.githubusercontent.com/60874453/173823733-58b100c7-701c-4a91-9d1a-25bffd187959.png)
+
 
 <h2>Zu Autostart hinzufügen</h2>
+Für den Autostart wird ein Service erstellt, welcher bei jedem Systemstart den Python Web Server startet.
 
 ```
 nano /etc/systemd/system/monitor.service
