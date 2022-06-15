@@ -6,11 +6,16 @@ Debian Server mit Root rechten
 
 
 <h3>Installation von Updates: </h3>
-<code> apt-get update && apt-get upgrade -y </code>
+
+```
+apt-get update && apt-get upgrade -y
+```
 
 
 <h3>Installation von Python 3.8.4 and pip </h3>
-<code>sudo apt install libffi-dev libbz2-dev liblzma-dev libsqlite3-dev libncurses5-dev libgdbm-dev zlib1g-dev libreadline-dev libssl-dev tk-dev build-essential libncursesw5-dev libc6-dev openssl git -y </code>
+```
+sudo apt install libffi-dev libbz2-dev liblzma-dev libsqlite3-dev libncurses5-dev libgdbm-dev zlib1g-dev libreadline-dev libssl-dev tk-dev build-essential libncursesw5-dev libc6-dev openssl git -y
+```
 
 ```
 cd /root
@@ -20,11 +25,11 @@ tar xf Python-3.8.4.tar.xz
 
 ```
 cd Python-3.8.4
-./configure <br>
-make -j -l 4 <br>
-make altinstall <br>
-echo "alias python=python3.8" >> ~/.bashrc <br>
-echo "alias pip3=pip3.8" >> ~/.bashrc <br>
+./configure
+make -j -l 4
+make altinstall
+echo "alias python=python3.8" >> ~/.bashrc
+echo "alias pip3=pip3.8" >> ~/.bashrc
 source ~/.bashrc
 ```
 <h3>Install eel </h3>
@@ -39,9 +44,9 @@ pip3 install psutil
 ```
 
 ```
-<code>mkdir /monitor </code>
-<code>cd /monitor </code>
-<code>wget <Link> </code>
+mkdir /monitor
+cd /monitor
+wget <Link>
 ```
 
 ```
