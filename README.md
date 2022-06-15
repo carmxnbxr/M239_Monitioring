@@ -33,12 +33,15 @@ echo "alias python=python3.8" >> ~/.bashrc
 echo "alias pip3=pip3.8" >> ~/.bashrc
 source ~/.bashrc
 ```
+
 <h3>Install eel </h3>
+
 ```
 pip3 install eel
 ```
 
 <h3>Install Python Module psutil </h3>
+
 ```
 pip3 install psutil
 ```
