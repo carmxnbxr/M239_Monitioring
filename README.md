@@ -17,6 +17,7 @@ cd /root
 wget https://www.python.org/ftp/python/3.8.4/Python-3.8.4.tar.xz
 tar xf Python-3.8.4.tar.xz
 ```
+
 ```
 cd Python-3.8.4
 ./configure <br>
@@ -27,12 +28,15 @@ echo "alias pip3=pip3.8" >> ~/.bashrc <br>
 source ~/.bashrc
 ```
 <h3>Install eel </h3>
+
 ```
 pip3 install eel
 ```
 
 <h3>Install Python Module psutil </h3>
-<code>pip3 install psutil </code>
+```
+pip3 install psutil
+```
 
 ```
 <code>mkdir /monitor </code>
@@ -65,6 +69,5 @@ User=root
 
 ```
 systemctl enable monitor.service
-
 systemctl start monitor.service
 ```
