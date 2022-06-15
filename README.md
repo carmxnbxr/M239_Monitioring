@@ -53,12 +53,13 @@ rm M239_Monitioring-main -r
 cd /monitor
 ```
 
+<h3>Start Web Server</h3>
 ```
 python3.8 /monitor/start.py
 ```
 
 <h3>Webseite über Browser aufrufen</h3>
-Connect to IP (Befehl: ip a) / localhost
+IP-Adresse (mit "ip a" abfragen) oder localhost (Auf dem Gerät)
 
 <h2>Zu Autostart hinzufügen</h2>
 
