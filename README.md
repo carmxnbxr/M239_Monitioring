@@ -3,7 +3,7 @@
 
 <h3>Voraussetungen: </h3>
 Debian Server mit Root rechten
-
+Als root auf dem Server einloggen
 
 <h3>Installation von Updates: </h3>
 
@@ -15,7 +15,7 @@ apt-get update && apt-get upgrade -y
 <h3>Installation von Python 3.8.4 and pip </h3>
 
 ```
-sudo apt install libffi-dev libbz2-dev liblzma-dev libsqlite3-dev libncurses5-dev libgdbm-dev zlib1g-dev libreadline-dev libssl-dev tk-dev build-essential libncursesw5-dev libc6-dev openssl git unzip -y
+apt install libffi-dev libbz2-dev liblzma-dev libsqlite3-dev libncurses5-dev libgdbm-dev zlib1g-dev libreadline-dev libssl-dev tk-dev build-essential libncursesw5-dev libc6-dev openssl git unzip -y
 ```
 
 ```
