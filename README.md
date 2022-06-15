@@ -15,7 +15,7 @@ apt-get update && apt-get upgrade -y
 <h3>Installation von Python 3.8.4 and pip </h3>
 
 ```
-sudo apt install libffi-dev libbz2-dev liblzma-dev libsqlite3-dev libncurses5-dev libgdbm-dev zlib1g-dev libreadline-dev libssl-dev tk-dev build-essential libncursesw5-dev libc6-dev openssl git -y
+sudo apt install libffi-dev libbz2-dev liblzma-dev libsqlite3-dev libncurses5-dev libgdbm-dev zlib1g-dev libreadline-dev libssl-dev tk-dev build-essential libncursesw5-dev libc6-dev openssl git unzip -y
 ```
 
 ```
@@ -43,8 +43,11 @@ pip3 install psutil
 <h3>Download Application Files</h3>
 ```
 mkdir /monitor
+wget https://github.com/carmxnbxr/M239_Monitioring/archive/refs/heads/main.zip
+unzip M239_Monitioring-main.zip
+cp ./M239_Monitioring-main/sources/* /monitor -R
+rm M239_Monitioring-main.zip
 cd /monitor
-wget <Link>
 ```
 
 ```
@@ -54,7 +57,7 @@ python3.8 /monitor/start.py
 <h3>Webseite über Browser aufrufen</h3>
 Connect to IP (Befehl: ip a) / localhost
 
-Zu Autostart hinzufügen
+<h2>Zu Autostart hinzufügen</h2>
 
 ```
 nano /etc/systemd/system/monitor.service
