@@ -34,18 +34,13 @@ echo "alias pip3=pip3.8" >> ~/.bashrc
 source ~/.bashrc
 ```
 
-<h3>Install eel </h3>
+<h3>Install eel Webserver & Python Module </h3>
 
 ```
 pip3 install eel
-```
-
-<h3>Install Python Module psutil </h3>
-
-```
 pip3 install psutil
 ```
-
+<h3>Download Application Files</h3>
 ```
 mkdir /monitor
 cd /monitor
