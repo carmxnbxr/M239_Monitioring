@@ -34,7 +34,6 @@ echo "alias pip3=pip3.8" >> ~/.bashrc
 source ~/.bashrc
 ```
 <h3>Install eel </h3>
-
 ```
 pip3 install eel
 ```
