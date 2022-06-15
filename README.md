@@ -41,10 +41,12 @@ pip3 install eel
 pip3 install psutil
 ```
 <h3>Download Application Files</h3>
+
 ```
-mkdir /monitor
-wget https://github.com/carmxnbxr/M239_Monitioring/archive/refs/heads/main.zip
+cd /root
+wget "https://github.com/carmxnbxr/M239_Monitioring/archive/refs/heads/main.zip"
 unzip M239_Monitioring-main.zip
+mkdir /monitor
 cp ./M239_Monitioring-main/sources/* /monitor -R
 rm M239_Monitioring-main.zip
 cd /monitor
