@@ -48,7 +48,8 @@ wget "https://github.com/carmxnbxr/M239_Monitioring/archive/refs/heads/main.zip"
 unzip main.zip
 mkdir /monitor
 cp ./M239_Monitioring-main/sources/* /monitor -R
-rm M239_Monitioring-main.zip
+rm main.zip
+rm M239_Monitioring-main -r
 cd /monitor
 ```
 
