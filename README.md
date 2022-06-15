@@ -86,7 +86,7 @@ systemctl enable monitor.service
 systemctl start monitor.service
 ```
 
-<1>Anpassungen</h1>
+<h1>Anpassungen</h1>
 
 <h2>Hintergrund wechseln</h2>
 
