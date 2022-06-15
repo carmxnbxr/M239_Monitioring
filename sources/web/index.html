@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>M126 Leon & Dylan</title>
+    <script type="text/javascript" src="/eel.js"></script>
+    <script type="text/javascript"></script>
+    <link rel="stylesheet" href="css/circle.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="dsk_div">
+        <h1 class="dsk">Monitoring Raspi</h1>
+    </div>
+
+    <div class="title_div">
+        <h1 class="titles">CPU</h1>
+        <h1 class="titles">Memory</h1>
+        <h1 class="titles">Disk</h1>
+    </div>
+
+    <div class="graph_div">
+
+        <div id="cpuusage_div">
+        </div>
+
+        <script>
+            function set_cpuusage(result) {
+                var el = document.getElementById('cpuusage_div');
+                var cpuusage_div;
+                var percent = result
+                cpuusage_div = '<div class="c100 p' + percent + '" id="cpuusage_container"><span>' + percent + '%</span><div class="slice"><div class="bar" id="cpuusage_bar"></div><div class="fill"></div></div></div>';
+                el.insertAdjacentHTML('afterbegin', cpuusage_div);
+                if (result < 61) {
+                    var el = document.getElementById('cpuusage_container');
+                    var cpuusage_container;
+                    cpuusage_container = '<style>#cpuusage_container #cpuusage_bar{border-color: #5fd400!important;}#cpuusage_container> span {color:#5fd400;}</style>';
+                    el.insertAdjacentHTML('afterbegin', cpuusage_container);
+                } else if (result < 81) {
+                    var el = document.getElementById('cpuusage_container');
+                    var cpuusage_container;
+                    cpuusage_container = '<style>#cpuusage_container #cpuusage_bar{border-color: #ffc72c!important;}#cpuusage_container > span {color:#ffc72c;}</style>';
+                    el.insertAdjacentHTML('afterbegin', cpuusage_container);
+                } else {
+                    var el = document.getElementById('cpuusage_container');
+                    var cpuusage_container;
+                    cpuusage_container = '<style>#cpuusage_container #cpuusage_bar{border-color: #ff0000!important;}#cpuusage_container > span {color:#ff0000;}</style>';
+                    el.insertAdjacentHTML('afterbegin', cpuusage_container);
+                }
+            }
+        </script>
+
+        <div id="memusage_div">
+        </div>
+
+        <script>
+            function set_memusage(result) {
+                var el = document.getElementById('memusage_div');
+                var memusage_div;
+                var percent = result
+                memusage_div = '<div class="c100 p' + percent + '" id="memusage_container"><span>' + percent + '%</span><div class="slice"><div class="bar" id="memusage_bar"></div><div class="fill"></div></div></div>';
+                el.insertAdjacentHTML('afterbegin', memusage_div);
+                if (result < 61) {
+                    var el = document.getElementById('memusage_container');
+                    var memusage_container;
+                    memusage_container = '<style>#memusage_container #memusage_bar{border-color: #5fd400!important;}#memusage_container> span {color:#5fd400;}</style>';
+                    el.insertAdjacentHTML('afterbegin', memusage_container);
+                } else if (result < 81) {
+                    var el = document.getElementById('memusage_container');
+                    var memusage_container;
+                    memusage_container = '<style>#memusage_container #memusage_bar{border-color: #ffc72c!important;}#memusage_container > span {color:#ffc72c;}</style>';
+                    el.insertAdjacentHTML('afterbegin', memusage_container);
+                } else {
+                    var el = document.getElementById('memusage_container');
+                    var memusage_container;
+                    memusage_container = '<style>#memusage_container #memusage_bar{border-color: #ff0000!important;}#memusage_container > span {color:#ff0000;}</style>';
+                    el.insertAdjacentHTML('afterbegin', memusage_container);
+                }
+            }
+        </script>
+
+        <div id="diskusage_bar">
+        </div>
+
+        <script>
+            function set_diskusage(result) {
+                var el = document.getElementById('diskusage_bar');
+                var diskusage_bar;
+                var percent = result
+                diskusage_bar = '<div class="c100 p' + percent + '" id="diskusage_container"><span>' + percent + '%</span><div class="slice"><div class="bar" id="diskusage_bar"></div><div class="fill"></div></div></div>';
+                el.insertAdjacentHTML('afterbegin', diskusage_bar);
+                if (result < 61) {
+                    var el = document.getElementById('diskusage_container');
+                    var diskusage_container;
+                    diskusage_container = '<style>#diskusage_container #diskusage_bar{border-color: #5fd400!important;}#diskusage_container> span {color:#5fd400;}</style>';
+                    el.insertAdjacentHTML('afterbegin', diskusage_container);
+                } else if (result < 81) {
+                    var el = document.getElementById('diskusage_container');
+                    var diskusage_container;
+                    diskusage_container = '<style>#diskusage_container #diskusage_bar{border-color: #ffc72c!important;}#diskusage_container > span {color:#ffc72c;}</style>';
+
+                } else {
+                    var el = document.getElementById('diskusage_container');
+                    var diskusage_container;
+                    diskusage_container = '<style>#diskusage_container #diskusage_bar{border-color: #ff0000!important;}#diskusage_container > span {color:#ff0000;}</style>';
+
+                }
+            }
+        </script>
+
+    </div>
+
+
+    <div class="reboot_div">
+        <a href="#" onclick="reboot()"><img src="/img/reboot.png" alt="" id="reboot"></a>
+    </div>
+    <script>
+        function reboot() {
+            eel.rebootrsp()
+        }
+
+        eel.cpuusage()(set_cpuusage)
+        eel.diskusage()(set_diskusage)
+        eel.memusage()(set_memusage)
+
+
+        var intervalId = window.setInterval(function() {
+            document.getElementById('cpuusage_div').innerHTML = "";
+            document.getElementById('memusage_div').innerHTML = "";
+            document.getElementById('diskusage_bar').innerHTML = "";
+            eel.cpuusage()(set_cpuusage)
+            eel.diskusage()(set_diskusage)
+            eel.memusage()(set_memusage)
+        }, 1000);
+    </script>
+</body>
+
+</html>

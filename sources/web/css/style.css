@@ -1,0 +1,42 @@
+.graph_div,
+.title_div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.titles {
+    text-align: center;
+    color: white;
+}
+
+body {
+    background-image: url("/img/background.jpg");
+    background-color: #A9A9A9;
+}
+
+.dsk_div {
+    height: 25vh;
+    display: flex;
+    algin-content: center;
+    text-align: center;
+}
+
+.dsk {
+    color: white;
+    font-size: 6vw;
+    text-align: center;
+    width: 50vw;
+    padding-left: 25vw;
+}
+
+.reboot_div {
+    padding-top: 5vh;
+    display: flex;
+    justify-content: center;
+}
+
+#reboot {
+    width: 15vw;
+    height: 15vw;
+}
