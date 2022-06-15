@@ -14,5 +14,5 @@ Das Bild "background.jpg" austauschen.
 cd /monitor/web/css
 nano circle.css
 ```
-Die Hex-Werte der Farben ändern
+Die Hex-Werte der Farben ändern <br>
 ![image](https://user-images.githubusercontent.com/60874453/173820834-2f2e3db2-2081-4f92-aaaf-159e419619cf.png)
