@@ -1,42 +1,56 @@
-# M239_Monitioring
-Modul 239 Tutorial für Monitoring
+<h1>M239 Monitioring Tutorial </h1>
 
-Voraussetzung Debian Server mit Root rechten
 
-#Installation der Updates
-apt-get update && apt-get upgrade -y
+<h3>Voraussetungen: </h3>
+Debian Server mit Root rechten
 
-#Install Python 3.8.4 and pip
-sudo apt install libffi-dev libbz2-dev liblzma-dev libsqlite3-dev libncurses5-dev libgdbm-dev zlib1g-dev libreadline-dev libssl-dev tk-dev build-essential libncursesw5-dev libc6-dev openssl git -y
-cd /root
-wget https://www.python.org/ftp/python/3.8.4/Python-3.8.4.tar.xz
-tar xf Python-3.8.4.tar.xz
-cd Python-3.8.4
-./configure
-make -j -l 4
-make altinstall
-echo "alias python=python3.8" >> ~/.bashrc
-echo "alias pip3=pip3.8" >> ~/.bashrc
-source ~/.bashrc
 
-#Install eel
-pip3 install eel
+<h3>Installation von Updates: </h3>
+<code> apt-get update && apt-get upgrade -y </code>
 
-#Install Python Module psutil
-pip3 install psutil
 
-mkdir /monitor
-cd /monitor
-wget <Link>
+<h3>Installation von Python 3.8.4 and pip </h3>
+<code>sudo apt install libffi-dev libbz2-dev liblzma-dev libsqlite3-dev libncurses5-dev libgdbm-dev zlib1g-dev libreadline-dev libssl-dev tk-dev build-essential libncursesw5-dev libc6-dev openssl git -y </code>
 
-python3.8 /monitor/start.py
+<code>cd /root </code>
 
+<code>wget https://www.python.org/ftp/python/3.8.4/Python-3.8.4.tar.xz </code>
+
+<code>tar xf Python-3.8.4.tar.xz </code>
+
+<code>cd Python-3.8.4 </code>
+
+<code>./configure </code>
+
+<code>make -j -l 4 </code>
+
+<code>make altinstall </code>
+
+<code>echo "alias python=python3.8" >> ~/.bashrc </code>
+
+<code>echo "alias pip3=pip3.8" >> ~/.bashrc </code>
+
+<code>source ~/.bashrc </code>
+
+<h3>Install eel </h3>
+<code>pip3 install eel </code>
+
+<h3>Install Python Module psutil </h3>
+<code>pip3 install psutil </code>
+
+<code>mkdir /monitor </code>
+<code>cd /monitor </code>
+<code>wget <Link> </code>
+
+<code>python3.8 /monitor/start.py </code>
+
+ Webseite über Browser aufrufen 
 Connect to IP (Befehl: ip a) / localhost
 
 Zu Autostart hinzufügen
 
 
-nano /etc/systemd/system/monitor.service
+<code>nano /etc/systemd/system/monitor.service
 
 
 [Unit]
