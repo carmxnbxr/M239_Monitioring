@@ -20,17 +20,12 @@ Debian Server mit Root rechten
 
 <code>cd Python-3.8.4 </code>
 
-<code>./configure </code>
-
-<code>make -j -l 4 </code>
-
-<code>make altinstall </code>
-
-<code>echo "alias python=python3.8" >> ~/.bashrc </code>
-
-<code>echo "alias pip3=pip3.8" >> ~/.bashrc </code>
-
-<code>source ~/.bashrc </code>
+<code>./configure
+make -j -l 4
+make altinstall
+echo "alias python=python3.8" >> ~/.bashrc
+echo "alias pip3=pip3.8" >> ~/.bashrc
+source ~/.bashrc </code>
 
 <h3>Install eel </h3>
 <code>pip3 install eel </code>
