@@ -34,7 +34,7 @@ echo "alias pip3=pip3.8" >> ~/.bashrc
 source ~/.bashrc
 ```
 
-<h3>Installieren von eel Webserver & Python Module </h3>
+<h3>Installieren von eel Webserver und Python Module </h3>
 
 ```
 pip3 install eel
