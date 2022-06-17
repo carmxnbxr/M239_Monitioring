@@ -1,9 +1,9 @@
 <h1>M239 Monitioring Tutorial </h1>
 
 
-<h3>Voraussetungen: </h3>
-Debian Server mit Root rechten
-Als root auf dem Server einloggen
+<h3>Voraussetzungen: </h3>
+Debian Server mit Root-Rechten.
+Als "root" auf dem Server einloggen.
 
 <h3>Installation von Updates: </h3>
 
@@ -12,7 +12,7 @@ apt-get update && apt-get upgrade -y
 ```
 
 
-<h3>Installation von Python 3.8.4 and pip </h3>
+<h3>Installation von Python 3.8.4 und pip </h3>
 
 ```
 apt install libffi-dev libbz2-dev liblzma-dev libsqlite3-dev libncurses5-dev libgdbm-dev zlib1g-dev libreadline-dev libssl-dev tk-dev build-essential libncursesw5-dev libc6-dev openssl git unzip -y
@@ -34,13 +34,13 @@ echo "alias pip3=pip3.8" >> ~/.bashrc
 source ~/.bashrc
 ```
 
-<h3>Install eel Webserver & Python Module </h3>
+<h3>Installieren von eel Webserver & Python Module </h3>
 
 ```
 pip3 install eel
 pip3 install psutil
 ```
-<h3>Download Application Files</h3>
+<h3>Herunterladen von Applikations-Daten</h3>
 
 ```
 cd /root
@@ -53,7 +53,7 @@ rm M239_Monitioring-main -r
 cd /monitor
 ```
 
-<h3>Start Web Server</h3>
+<h3>Start Web-Server</h3>
 
 ```
 python3.8 /monitor/start.py
